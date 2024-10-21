@@ -1,0 +1,147 @@
+:root {
+    --paragraph: #0e172c;
+    --headline: #0e172c;
+    --background: #e5b3c2;
+    --button: #0e172c;
+    --buttontext: #fffffe;
+    --secondary: #d9d4e7;
+    --tertiary: #a786df;
+}
+
+/* Fonts */
+h1,
+h2,
+h3 {
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--button);
+}
+
+p,
+input,
+button,
+li {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: var(--button);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p,
+input,
+button,
+li {
+    font-size: 16px;
+    color: var(--button);
+}
+
+body {
+    background-color: var(--background);
+}
+
+main,
+header {
+    padding: 1em 3em 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+    gap: 1em;
+}
+
+header img {
+    width: 100px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 1em;
+    margin-right: 0.5em;
+    width: 35%;
+}
+
+button {
+    background-color: var(--button);
+    color: var(--buttontext);
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 2em;
+}
+
+
+/* Basic styles for chat interface */
+#chat {
+    border: 1px solid #ccc;
+    min-height: 400px;
+    max-height: 800px;
+    overflow-y: scroll;
+    padding: 1em;
+    background-color: var(--buttontext);
+    border-radius: 1em;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--tertiary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+    /* Center the spinner */
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media(min-width: 768px) {}
+
+@media(min-width: 950px) {
+
+    main,
+    header {
+        padding: 1em 2em 0;
+    }
+
+    #chat {
+        min-height: 200px;
+        max-height: 400px;
+    }
+
+}
